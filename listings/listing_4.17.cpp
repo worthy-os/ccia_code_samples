@@ -1,8 +1,8 @@
-#include <experimental/future>
+#include <future>
 template<typename Func>
-std::experimental::future<decltype(std::declval<Func>()())>
+std::future<decltype(std::declval<Func>()())>
 spawn_async(Func&& func){
-    std::experimental::promise<
+    std::promise<
         decltype(std::declval<Func>()())> p;
     auto res=p.get_future();
     std::thread t(

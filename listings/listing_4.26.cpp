@@ -1,4 +1,4 @@
-#include <experimental/barrier>
+#include <barrier>
 #include <thread>
 #include <vector>
 
@@ -40,7 +40,7 @@ void process_data(data_source &source, data_sink &sink) {
     unsigned const concurrency = std::thread::hardware_concurrency();
     unsigned const num_threads = (concurrency > 0) ? concurrency : 2;
 
-    std::experimental::barrier sync(num_threads);
+    std::barrier sync(num_threads);
     std::vector<joining_thread> threads(num_threads);
 
     std::vector<data_chunk> chunks;
