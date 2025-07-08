@@ -1,5 +1,10 @@
+#include<mutex>
+#include<vector>
+#include<algorithm>
+#include<execution>
+
 class Y{
-    int data;
+    int data{};
 public:
     Y():data(0){}
     int get_value() const{

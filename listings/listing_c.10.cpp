@@ -1,5 +1,4 @@
-int main()
-{
+int main() {
     bank_machine bank;
     interface_machine interface_hardware;
     atm machine(bank.get_sender(),interface_hardware.get_sender());
@@ -8,11 +7,9 @@ int main()
     std::thread atm_thread(&atm::run,&machine);
     messaging::sender atmqueue(machine.get_sender());
     bool quit_pressed=false;
-    while(!quit_pressed)
-    {
+    while(!quit_pressed) {
         char c=getchar();
-        switch(c)
-        {
+        switch(c) {
         case '0':
         case '1':
         case '2':
