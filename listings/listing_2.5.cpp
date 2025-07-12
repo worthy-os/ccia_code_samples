@@ -1,13 +1,13 @@
 #include <thread>
-void some_function() {}
-void some_other_function(int) {}
+//void some_function() {}
+//void some_other_function(int) {}
 
 std::thread f() {
-    void some_function();  // Note: hidden name, why? TODO??:
+    void some_function();
     return std::thread{some_function};
 }
 std::thread g() {
-    void some_other_function(int);  // Note: hidden name
+    void some_other_function(int);
     std::thread t{some_other_function,42};
     return t;
 }
