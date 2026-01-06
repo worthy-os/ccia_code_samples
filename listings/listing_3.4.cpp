@@ -1,14 +1,12 @@
 #include <exception>
 #include <memory>
 
-struct empty_stack: std::exception
-{
-    const char* what() const throw();
+struct empty_stack: std::exception {
+    char const * what() const noexcept final { return "error"; };
 };
 
 template<typename T>
-class threadsafe_stack
-{
+class threadsafe_stack {
 public:
     threadsafe_stack();
     threadsafe_stack(const threadsafe_stack&);
