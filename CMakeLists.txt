@@ -3,8 +3,7 @@
 cmake_minimum_required(VERSION 3.30)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set (SRCS
-    README.md
+set (SRCS README.md
    #listings/listing_1.1.cpp
    #listings/listing_10.1.cpp
    #listings/listing_10.2.cpp
@@ -14,7 +13,7 @@ set (SRCS
    #listings/listing_2.2.cpp
    #listings/listing_2.3.cpp
    #listings/listing_2.4.cpp
-    listings/listing_2.5.cpp
+   #listings/listing_2.5.cpp
    #listings/listing_2.6.cpp
    #listings/listing_2.7.cpp
    #listings/listing_2.8.cpp
